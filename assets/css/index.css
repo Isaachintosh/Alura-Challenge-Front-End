@@ -1,0 +1,135 @@
+body {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "aside section form"
+    "footer footer footer";
+  background: rgb(5, 26, 59); 
+  padding: 16px;
+  letter-spacing: 2px;
+  font-style: 'inter', sans-serif;
+}
+.header {
+  grid-area: header;
+}
+.menu-paginas{
+  grid-area: aside;
+  flex: 1 1 400px;
+  padding: 16px;
+  margin: 0px 16px 0px 0px;
+}
+h6 {
+    margin: 0px;
+    padding: 0px;
+}
+.btn-pagina {
+    background: #5081FB;
+    border-radius: 12px;
+}
+.nav-link {
+    color: #fff;
+}
+.menu-personalizar {
+  grid-area: form;
+  flex: 1 1 600px;
+  padding: 16px;
+  margin: 16px;
+}
+.editor-de-codigo {
+  display: flex;
+  flex-direction: column ;
+  grid-area: section;
+  padding: 16px;
+  flex: 1 1 900px;
+  width: 100%;
+  height: 40rem;
+  background: #222;
+  border: 28px solid #6BD1FF;
+  border-radius: 28px;
+}
+.navbar {
+    background: rgb(5, 26, 59);
+}
+.logotipo {
+    width: 106px;
+}
+.form-control,
+.formulario,
+.btn-highlight
+{
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    color: #fff;
+    height: 56px;
+    width: 100%;
+}
+label {
+    color: #fff;
+}
+.pesquisa {
+    background: none;
+}
+.descricao-projeto {
+    color: #fff;
+    height: 112px;
+}
+.aplicativo {
+    display: box;
+    width: 620px;
+    height: 500px;
+    background: #1c1c1c;
+    border: 1px solid rgba(0,0,0, 0.2);
+    border-radius: 20px;
+}
+.janela-do-editor {
+    margin: 8px 16px 16px 0px;
+    padding: 8px;
+}
+pre,
+code,
+.hljs {
+    display: block;
+    white-space: pre-wrap;
+    color: #fff;
+    border-radius: 8px;
+    width: auto;
+    height: 100%;
+    font-style: 'roboto';
+}
+.opt-lang {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+.mudar-tema {
+    padding: 16px;
+    width: auto;
+}
+
+
+/* mobile display */
+
+@media (max-width:768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: 2px;
+        
+    } 
+    .menu-paginas,
+    .pesquisa {
+        display: none;
+    }
+    .menu-personalizar,
+    .editor-de-codigo, 
+    .aplicativo {
+        width: 100%;
+        height: 30rem;
+        margin: 0px 0px 0px 0px;
+    }
+    code {
+        height: 100%;
+        margin-bottom: 8px;
+    }
+    
+}

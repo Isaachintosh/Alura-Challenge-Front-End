@@ -1,0 +1,228 @@
+body{
+  display: flex;
+  flex-direction: column;
+  background: rgb(5, 26, 59); 
+  padding: 16px;
+  letter-spacing: 2px;
+  font-style: 'inter', sans-serif;
+}
+.header {
+  grid-area: header;
+  justify-content: space-between;
+}
+.menu-paginas{
+  grid-area: aside;
+  padding: 16px;
+  margin: 0px 16px 0px 0px;
+}
+h6 {
+    margin: 0px;
+    padding: 0px;
+}
+.btn-pagina {
+    background: #5081FB;
+    border-radius: 12px;
+}
+.nav-link {
+    color: #fff;
+}
+.comunidade {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.repositorio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  
+}
+.card-projeto {
+  width: 48%;
+  margin: 8px 8px 8px 8px;
+}
+.editor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 79%;
+}
+.editor-de-codigo {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  flex: 1 1 225px;
+  width: 100%;
+  height: 560px;
+  background: #222;
+  border: 16px solid #6BD1FF;
+  border-radius: 28px;
+  margin-bottom: 16px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(5, 26, 59);
+}
+.logotipo {
+    width: 106px;
+}
+.form-control,
+.formulario,
+.btn-highlight
+{
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 8px;
+  color: #fff;
+  height: 56px;
+  width: 100%;
+}
+label {
+  color: #fff;
+}
+.pesquisa {
+  background: none;
+}
+.descricao-projeto {
+  color: #fff;
+  height: 112px;
+}
+.aplicativo {
+  display: box;
+  width: 100%;
+  height: 100%;
+  background: #1c1c1c;
+  border: 1px solid rgba(0,0,0, 0.2);
+  border-radius: 20px;
+  color: #fff;
+}
+.janela-do-editor {
+  margin: 8px 16px 16px 0px;
+  padding: 8px;
+  width:100%;
+}
+pre {
+  height: 100%;
+}
+code {
+  display: block;
+  white-space: pre-wrap;
+  color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  font-style: 'roboto';
+}
+.detalhes {
+  background: rgba(0,0,0,0.45);
+  border-radius: 20px;
+}
+.propriedades {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 8px;
+  
+}
+.cabecalho-card {
+  margin: 8px;
+}
+p.cabecalho-card {
+  color: #aaa;
+}
+
+.interacao {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  
+}
+.comentarios {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+}
+.projetos {
+  display: flex;
+}
+
+li {
+  margin: 8px;
+  padding: 8px;
+}
+.autor {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin: 8px;
+}
+.nome-autor {
+  padding-left: 8px;
+}
+.foto-autor {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* mobile display */
+@media (max-width: 1024px) {
+  .menu-paginas {
+    display: none;
+  }
+  .editor {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .card-projeto {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px;
+  }
+  header, 
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .menu-paginas,
+  .pesquisa {
+    display: none;
+  }
+  .card-projeto {
+    width: 100%;
+    margin: 0rem 5rem 5rem 0rem;
+  }
+  .editor-de-codigo, 
+  .aplicativo {
+    width: 100%;
+    height: 40rem;
+    margin: 0px 0px 0px 0px;
+  }
+  code {
+    height: auto;
+    margin-bottom: 8px;
+      
+  }
+  .repositorio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .detalhes {
+    width: 100%;
+  }
+}

@@ -1,102 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Página Inicial</title>
-  <link rel="stylesheet" href="assets/css/reset.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/style_desktop.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/mobile.css" type="text/css" media="all" />
-
-</head>
-
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/dracula.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    
+    <title>Editor de Código</title>
+  </head>
   <body>
-  <header class="main-header">
-    <img src="assets/img/logotipo.png" class="logo"  alt="Logo da Alura Dev" />
-    <div class="search">
-      <input type="text" class="search-text" />
-      <button type="btn-search">🔍</button>
-    </div>
-    <div class="user-properties">
-      <img src="assets/img/img-usuario.jpg" class="user-profile" alt="Propriedades do Usuário" />
-      <p class="user-name">Isaac</p>
-    </div>
-  </header>
-  
-  <section class="editor-navigation">
-    <!-- Menu de navegação entre paginas à esquerda--> 
-    <div class="left-menu">
-      <ul class="menu-container">
-        <li>
-          <h2>Menu</h2>
-        </li>
-        <li class="code-editor-link">
-          <img src="assets/img/codando.png" class="navigation-menu" alt="Editor de Código" />
-          <a href="#">
-            Editor de Código
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">
+              <img class="logotipo" src="assets/img/logotipo.png" alt="Editor de Código Alura Dev" />
           </a>
-        </li>
-        <li class="code-editor-link">
-          <img src="assets/img/comunidade.png" class="navigation-menu" alt="Comunidade" />
-          <a href="#">
-              Comunidade
-            </a>
-        </li>
-      </ul>
-    </div>
-    
-    <!--Area do editor de código-->
-    <div class="code-editor">
-      <ul class="editor-window-corners">
-        <li>
-          <div class="editor-window">
-            <div class="menu-bar">
-              <img src="assets/img/Ellipse-1.png" class="mac-dots" alt="">
-              <img src="assets/img/Ellipse-2.png" class="mac-dots" alt="">
-              <img src="assets/img/Ellipse-3.png" class="mac-dots" alt="">
-            </div>
-            <textarea id=editorDeCodigo rows="16" cols="20" placeholder="/* const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res) const unfold = (f, seed) => { const go = (f, seed, acc) => { const res = f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc } return go(f, seed, []) } */"></textarea>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span >
+                <img src="assets/img/Vectormenu-icone.png" alt="clique aqui para abrir o menu de navegação e busca" />
+            </span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Editor de Código<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="comunidade.html">Comunidade</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sobre o Editor
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Contexto</a>
+                  <a class="dropdown-item" href="#">Objetivos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Sobre o desenvolvedor</a>
+                </div>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn my-2 my-sm-0 pesquisa" type="submit">🔍</button>
+            </form>
           </div>
-        </li>
-      </ul>
-      <div class="highlight-viewer">
-        <a href="#">Visualizar com o Highlight</a>
-      </div>
-    </div>
+        </nav>
+    </header>
     
-    <!--Menu de personalização do projeto-->
-    <div class="customize-project">
-      <ul class="your-project">
-        <li>
-          <h2 class="cutomize-title">Seu Projeto</h2>
-        </li>
-        <li>
-          <input type="text" class="project-name" id="projectName" placeholder="Nome do Projeto" />
-        </li>
-        <li>
-          <input type="text" class="project-description" id="projectDescription" placeholder="Descrição do projeto"/>
-        </li>
-        <li>
-          <h2 class="cutomize-title">Personalização</h2>
-        </li>
-        <li>
-          <select id="languageTypes" class="language-types">
-            <option>Javascript</option>
-            <option>CSS</option>
-            <option>HTML</option>
-          </select>
-        </li>
-        <li>
-          <input type="color" class="project-color" id="projectColor"/>
-        </li>
-        <li>
-          <a href="#" class="project-save">Salvar Projeto</a>
-        </li>
-      </ul>      
-    </div>
-
-  </section>
-</body>
+    <aside class="menu-paginas">
+        <nav class="nav flex-column">
+          <h6 class="nav-link">Menu</h6>
+          <a class="nav-link active" href="home.html">
+              <img src="assets/img/codando.png" class="btn btn-pagina" alt="Clique aqui para ir a página do editor" />
+              Editor de código
+          </a>
+          <a class="nav-link" href="comunidade.html">
+              <img src="assets/img/comunidade.png" class="btn btn-pagina" alt="clique aqui para ir a página da comunidade" />
+              Comunidade
+          </a>
+        </nav>
+    </aside>
+    
+    <section class="editor">
+        <div class="container editor-de-codigo" id="editorDeCodigo">
+            <div class="janela-do-editor flex-row">
+                <img class="janela-botoes" src="assets/img/Ellipse-1.png" alt="fechar" />
+                <img class="janela-botoes" src="assets/img/Ellipse-2.png" alt="minimizar" />
+                <img class="janela-botoes" src="assets/img/Ellipse-3.png" alt="maximizar" />
+            </div>
+            <pre><code class="aplicativo hljs" id="aplicativo" contenteditable="true" aria-label="editor"></code></pre>
+        </div>
+        <div class="container mudar-tema">
+            <button class="btn btn-highlight" type="submit" data-highlight>Visualizar Highlight</button>
+        </div>
+    </section>
+    
+    <aside class="menu-personalizar">
+        <form action="#" method="get" accept-charset="utf-8">
+            <label for="Nome-do-projeto">Nome do projeto</label><br>
+            <input type="text" name="nomeDoProjeto" id="nomeDoProjeto" value="" required="true" class="formulario form-control mr-sm-2"/><br>
+            <label for="descrição">Descreva seu projeto</label><br>
+            <input type="text" name="descricaoProjeto" id="descricaoDoProjeto" value="" required="true" class="formulario form-control mr-sm-2 descricao-projeto"/>
+            <br>
+            <label for="personalizar">Personalização</label><br>
+            <select id="linguagem" class="linguagem formulario form-control mr-sm-2">
+                <option value="javascript" class="opt-lang">Javascript</option>
+                <option value="css" class="opt-lang">CSS</option>
+                <option value="html" class="opt-lang">HTML</option>
+            </select><br>
+            <input type="color" name="corDoProjeto" id="corDoProjeto" class="formulario form-control mr-sm-2" value="#6BD1FF" data-mudar-cor/><br>
+            <button type="button" name="salvarProjeto" id="salvarProjeto" class="salvar-projeto form-control mr-sm-2" >
+                Salvar projeto
+            </button>
+        </form>
+    </aside>
+    <script src="assets/js/home.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+  </body>
 </html>
