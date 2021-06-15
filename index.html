@@ -50,55 +50,57 @@
         </nav>
     </header>
     
-    <aside class="menu-paginas">
-        <nav class="nav flex-column">
-          <h6 class="nav-link">Menu</h6>
-          <a class="nav-link active" href="home.html">
-              <img src="assets/img/codando.png" class="btn btn-pagina" alt="Clique aqui para ir a página do editor" />
-              Editor de código
-          </a>
-          <a class="nav-link" href="comunidade.html">
-              <img src="assets/img/comunidade.png" class="btn btn-pagina" alt="clique aqui para ir a página da comunidade" />
-              Comunidade
-          </a>
-        </nav>
-    </aside>
-    
-    <section class="editor">
-        <div class="container editor-de-codigo" id="editorDeCodigo">
-            <div class="janela-do-editor flex-row">
-                <img class="janela-botoes" src="assets/img/Ellipse-1.png" alt="fechar" />
-                <img class="janela-botoes" src="assets/img/Ellipse-2.png" alt="minimizar" />
-                <img class="janela-botoes" src="assets/img/Ellipse-3.png" alt="maximizar" />
-            </div>
-            <pre><code class="aplicativo hljs" id="aplicativo" contenteditable="true" aria-label="editor"></code></pre>
-        </div>
-        <div class="container mudar-tema">
-            <button class="btn btn-highlight" type="submit" data-highlight>Visualizar Highlight</button>
-        </div>
+    <section class="conteudo">
+      <aside class="menu-paginas">
+          <nav class="nav flex-column">
+            <h6 class="nav-link">Menu</h6>
+            <a class="nav-link active" href="home.html">
+                <img src="assets/img/codando.png" class="btn btn-pagina" alt="Clique aqui para ir a página do editor" />
+                Editor de código
+            </a>
+            <a class="nav-link" href="comunidade.html">
+                <img src="assets/img/comunidade.png" class="btn btn-pagina" alt="clique aqui para ir a página da comunidade" />
+                Comunidade
+            </a>
+          </nav>
+      </aside>
+      
+      <section class="editor">
+          <div class="container editor-de-codigo" id="editorDeCodigo">
+              <div class="janela-do-editor flex-row">
+                  <img class="janela-botoes" src="assets/img/Ellipse-1.png" alt="fechar" />
+                  <img class="janela-botoes" src="assets/img/Ellipse-2.png" alt="minimizar" />
+                  <img class="janela-botoes" src="assets/img/Ellipse-3.png" alt="maximizar" />
+              </div>
+              <pre><code class="aplicativo codeArea hljs" id="aplicativo" contenteditable="true" aria-label="editor"></code></pre>
+          </div>
+          <div class="container mudar-tema">
+              <button class="btn btn-highlight" type="submit" data-highlight>Visualizar Highlight</button>
+          </div>
+      </section>
+      
+      <aside class="menu-personalizar">
+          <form action="#" method="get" accept-charset="utf-8">
+              <label for="Nome-do-projeto">Nome do projeto</label><br>
+              <input type="text" name="nomeDoProjeto" id="nomeDoProjeto" value="" required="true" class="formulario form-control mr-sm-2"/><br>
+              <label for="descrição">Descreva seu projeto</label><br>
+              <input type="text" name="descricaoProjeto" id="descricaoDoProjeto" value="" required="true" class="formulario form-control mr-sm-2 descricao-projeto"/>
+              <br>
+              <label for="personalizar">Personalização</label><br>
+              <select id="linguagem" class="linguagem formulario form-control mr-sm-2">
+                  <option value="javascript" class="opt-lang">Javascript</option>
+                  <option value="css" class="opt-lang">CSS</option>
+                  <option value="html" class="opt-lang">HTML</option>
+              </select><br>
+              <input type="color" name="corDoProjeto" id="corDoProjeto" class="formulario form-control mr-sm-2" value="#6BD1FF" data-mudar-cor/><br>
+              <button type="button" name="salvarProjeto" id="salvarProjeto" class="salvar-projeto form-control mr-sm-2" >
+                  Salvar projeto
+              </button>
+          </form>
+      </aside>
     </section>
-    
-    <aside class="menu-personalizar">
-        <form action="#" method="get" accept-charset="utf-8">
-            <label for="Nome-do-projeto">Nome do projeto</label><br>
-            <input type="text" name="nomeDoProjeto" id="nomeDoProjeto" value="" required="true" class="formulario form-control mr-sm-2"/><br>
-            <label for="descrição">Descreva seu projeto</label><br>
-            <input type="text" name="descricaoProjeto" id="descricaoDoProjeto" value="" required="true" class="formulario form-control mr-sm-2 descricao-projeto"/>
-            <br>
-            <label for="personalizar">Personalização</label><br>
-            <select id="linguagem" class="linguagem formulario form-control mr-sm-2">
-                <option value="javascript" class="opt-lang">Javascript</option>
-                <option value="css" class="opt-lang">CSS</option>
-                <option value="html" class="opt-lang">HTML</option>
-            </select><br>
-            <input type="color" name="corDoProjeto" id="corDoProjeto" class="formulario form-control mr-sm-2" value="#6BD1FF" data-mudar-cor/><br>
-            <button type="button" name="salvarProjeto" id="salvarProjeto" class="salvar-projeto form-control mr-sm-2" >
-                Salvar projeto
-            </button>
-        </form>
-    </aside>
     <script src="assets/js/home.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

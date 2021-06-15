@@ -1,3 +1,5 @@
+//Agradeço ao apoio do Matheus Henrique da SCUBATEAM na resolução dos bugs e nas explicações
+
 const todosOsProjetos = document.querySelector('.js-todos-projetos')
 
 new function() {
@@ -21,8 +23,8 @@ function mostraProjetos () {
     const codigoHtml = todosOsProjetos.querySelector(`[data-id="${projeto.id}"]`)
     codigoHtml.querySelector('code').innerText = projeto.detalhesDoProjeto.codigo
   })
-  
-}
+   
+}     
 
 function montaCartao(projeto) {
   /*
@@ -31,7 +33,7 @@ function montaCartao(projeto) {
   let cartao = `
     <li class="container card-projeto">
       <a href="home.html" class="projeto_wrapper" data-id="${projeto.id}">
-        <div class="editor-de-codigo">
+        <div class="editor-de-codigo" style="border-color: ${projeto.detalhesDoProjeto.color};">
           <div class="janela-do-editor flex-row">
             <img class="janela-botoes" src="assets/img/Ellipse-1.png" alt="" />
             <img class="janela-botoes" src="assets/img/Ellipse-2.png" alt="" />
@@ -85,7 +87,8 @@ function montaCartao(projeto) {
         </div>
     </li>
   `
-  return cartao
+  
+  return cartao 
 }
 
 /*

@@ -1,14 +1,15 @@
+/* mudar cor da borda */
+
 const escolherCor = document.getElementById('corDoProjeto')
 const borda = document.getElementById('editorDeCodigo')
 
 escolherCor.addEventListener('input', () => {
-  
-  borda.style = 'border: 28px solid ' + escolherCor.value + ';'
-})
+  borda.style.borderColor = escolherCor.value
+}) 
 
 /* aplicando highlight */
 
-const areaDoCodigo = document.querySelector('#editorDeCodigo')
+const areaDoCodigo = document.querySelector('#aplicativo')
 const linguagem = document.getElementById('linguagem')
 const btnEscolhe = document.querySelector('.btn-highlight')
 
@@ -23,13 +24,15 @@ linguagem.addEventListener('change', () => {
 })
 
 btnEscolhe.addEventListener('click', () => {
-  const codigo = areaDoCodigo.querySelector('code')
-  hljs.highlightElement(codigo)
+  const codigo = document.querySelector('code')
+  hljs.highlightBlock(codigo)
 })
 
 /* salvar projeto */
 
 const btnSalvar = document.getElementById('salvarProjeto')
+//Agradeço ao apoio do Matheus Henrique da SCUBATEAM na resolução dos bugs e nas explicações
+
 const tituloDoProjeto = document.getElementById('nomeDoProjeto')
 const descricaoDoProjeto = document.getElementById('descricaoDoProjeto')
 
@@ -53,7 +56,8 @@ function montaProjeto() {
       'nomeDoProjeto': tituloDoProjeto.value,
       'descricaoDoProjeto': descricaoDoProjeto.value,
       'linguagem': linguagem.value,
-      'codigo': areaDoCodigo.querySelector('code').innerText
+      'codigo': document.querySelector('code').innerText,
+      'color': escolherCor.value,
     }
   }
   return projeto
