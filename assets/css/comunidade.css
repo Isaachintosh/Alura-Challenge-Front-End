@@ -136,15 +136,26 @@ p.cabecalho-card {
 
 .interacao {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   
+}
+.secao-comentarios {
+  display: flex;
+  flex-direction: column;
 }
 .comentarios {
   padding: 16px;
   display: flex;
   flex-direction: row;
+  width: 100%;
+}
+.lista-de-comentarios {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  color: #ffffff;
 }
 .projetos {
   display: flex;
